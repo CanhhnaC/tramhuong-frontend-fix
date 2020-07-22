@@ -10,6 +10,7 @@ import {
   CategorySlide,
   CategoryBar,
 } from "../../layout/category";
+import { useRouteMatch } from "react-router";
 
 const dataSlide = {
   name: "Tác phẩm",
@@ -43,26 +44,28 @@ const dataMain = [
   },
 ];
 
-const dataBar = [
-  {
-    name: "Tác phẩm",
-    link: "tac-pham",
-  },
-  {
-    name: "Vòng",
-    link: "vong",
-  },
-  {
-    name: "Trầm Cảnh",
-    link: "tram-canh",
-  },
-  {
-    name: "Nhang Trầm",
-    link: "nhang-tram",
-  },
-];
-
 export default function BoSuuTap() {
+  var link = useRouteMatch().url;
+
+  const dataBar = [
+    {
+      name: "Tác phẩm",
+      link: link + "/tac-pham",
+    },
+    {
+      name: "Vòng",
+      link: link + "/vong",
+    },
+    {
+      name: "Trầm Cảnh",
+      link: link + "/tram-canh",
+    },
+    {
+      name: "Nhang Trầm",
+      link: link + "/nhang-tram",
+    },
+  ];
+
   return (
     <div>
       <CategoryBar data={dataBar} name="Bộ sưu tập" />

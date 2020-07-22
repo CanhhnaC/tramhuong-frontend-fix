@@ -24,17 +24,15 @@ const textStyle = {
 function NavCategory(props) {
   return (
     <div className="nav-category text-center">
-      <h1 className=" upper ici" style={{ fontSize: "1em" }}>
+      <h2 className=" upper ici" style={{ fontSize: "1em" }}>
         {props.titleNav}
-      </h1>
+      </h2>
       {props.children}
     </div>
   );
 }
 
 function CategoryBar(props) {
-  let match = useRouteMatch();
-
   const activeStyle = { color: "#FCCC84" };
 
   const link =
@@ -47,11 +45,7 @@ function CategoryBar(props) {
       </Col>
       <Col lg={7}>
         {props.data.map((item, key) => (
-          <NavLink
-            key={key}
-            activeStyle={activeStyle}
-            to={`${match.url}/${item.link}`}
-          >
+          <NavLink key={key} activeStyle={activeStyle} to={`${item.link}`}>
             {item.name}
           </NavLink>
         ))}

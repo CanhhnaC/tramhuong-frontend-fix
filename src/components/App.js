@@ -1,7 +1,6 @@
 // Modules
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { RecoilRoot } from "recoil";
 
 // Layout
 import Header from "./layout/header";
@@ -17,9 +16,9 @@ import ChinhSach from "./pages/ChinhSach";
 import KienThuc from "./pages/kienthuc";
 import ThongTin from "./pages/thongtin";
 
-// // Child Component
-// import CategoryBST from "./home/pages/bosuutap/CategoryBST";
-// import CategoryDCTT from "./home/pages/dungcu/CategoryDCTT";
+// // List component
+import CategoryBST from "./pages/bosuutap/CategoryBST";
+// import CategoryDCTT from "./pages/dungcu/CategoryDCTT";
 
 import ScrollToTop from "./layout/effect/ScrollToTop";
 // Css
@@ -41,9 +40,11 @@ function App() {
             <Route exact path="/chinh-sach" component={ChinhSach} />
             <Route exact path="/kien-thuc" component={KienThuc} />
             <Route exact path="/thong-tin" component={ThongTin} />
-            {/* <Route exact path={["bo-suu-tap/:"]}
+
             <Route exact path="/bo-suu-tap/:category" component={CategoryBST} />
-            <Route exact path="/dung-cu/:category" component={CategoryDCTT} /> */}
+            {/* <Route exact path="/dung-cu/:category" component={CategoryDCTT} /> */}
+            {/* <Route exact path="/bo-suu-tap/:category/:productID" component={ProductBST} /> */}
+            {/* <Route exact path="/dung-cu/:category/:productID" component={ProductDCTT} /> */}
           </Main>
         </Switch>
       </ScrollToTop>
