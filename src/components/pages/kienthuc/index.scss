@@ -1,0 +1,22 @@
+.kien-thuc {
+  .kienthuc-item {
+    padding: 20px 40px;
+
+    h5 {
+      color: #5c5c5c;
+    }
+    p {
+      color: #c0c0c0;
+      padding: 40px 0 20px;
+    }
+    button {
+      text-transform: uppercase;
+    }
+  }
+  .kienthuc-seemore {
+    button {
+      text-transform: uppercase;
+      padding: 10px 20%;
+    }
+  }
+}

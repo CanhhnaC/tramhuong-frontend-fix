@@ -1,0 +1,23 @@
+.carousel-caption {
+    top: 10%;   
+}
+
+.carousel-inner button {
+    margin-top: 10px;
+    background-color: black;
+}
+
+@media (max-width: 540px) {
+    .carousel-caption p {
+        display: none;
+    }  
+}
+
+.carousel-item img {
+    object-fit: cover;
+    max-height: 700px;
+}
+
+.carousel-item {
+    background-color: black;
+}

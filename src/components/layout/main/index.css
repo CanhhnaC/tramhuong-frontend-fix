@@ -1,0 +1,9 @@
+.main .img {
+  background-image: url("../img/background.jpg");
+  background-size: calc(100% + 2px);
+}
+
+.main {
+  color: white;
+  background-color: black;
+}

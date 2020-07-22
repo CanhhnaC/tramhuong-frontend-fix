@@ -1,0 +1,83 @@
+.su-kien {
+  .sukien-item {
+    background-color: #161616;
+    padding: 30px;
+    margin: 15px 0;
+
+    .sukien-item__1 {
+      p {
+        color: #c0c0c0;
+        padding-top: 20px;
+        max-height: 260px;
+        overflow: hidden;
+      }
+
+      div {
+        margin: 20px 0;
+        align-items: center;
+        div {
+          padding: 0;
+          margin-right: 20px;
+          button {
+            cursor: context-menu;
+            background-color: white !important;
+            color: black;
+            border: 1px solid white;
+            width: 100%;
+
+            &:hover,
+            &:focus,
+            &:active {
+              border: 1px solid #fff;
+            }
+            &:before {
+              background: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .sukien-item__2 {
+      padding: 0;
+      position: relative;
+
+      button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        text-transform: uppercase;
+      }
+
+      a > div {
+        position: relative;
+        img {
+          width: 100%;
+          vertical-align: top;
+        }
+        &::after {
+          content: "\A";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgba($color: #000000, $alpha: 0.6);
+          opacity: 0;
+          transition: all 1s;
+        }
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .sukien-seemore {
+    button {
+      text-transform: uppercase;
+      padding: 10px 20%;
+    }
+  }
+}

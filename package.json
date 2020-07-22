@@ -1,16 +1,19 @@
 {
-  "name": "learn-firebasae-1",
+  "name": "buil-pro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "firebase": "^7.16.0",
-    "moment": "^2.27.0",
+    "bootstrap": "^4.5.0",
+    "firebase": "^7.16.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.1.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-router": "^5.2.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "recoil": "^0.0.10"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,5 +35,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }

@@ -1,0 +1,51 @@
+.kien-thuc {
+  padding: 20px 40px;
+
+  small {
+    color: #5b5c5e;
+  }
+  p {
+    color: #c0c0c0;
+    padding-top: 20px;
+  }
+}
+
+.thong-tin {
+  background-color: #161616;
+  padding: 30px;
+  margin: 15px 0;
+
+  p {
+    color: #c0c0c0;
+    padding-top: 20px;
+    max-height: 260px;
+    overflow: hidden;
+  }
+}
+
+.category-bst {
+  margin-bottom: 20px;
+
+  button {
+    margin: 10px 0;
+  }
+}
+
+.ShowBST {
+  padding: 60px 10%;
+  margin: 10px 0;
+  background-color: #1a1a1a;
+  p {
+    padding: 30px 0 15px 0;
+  }
+}
+
+.showDCTT {
+  padding: 60px 10%;
+  h6 {
+    padding-bottom: 15px;
+  }
+  h2 {
+    padding-top: 20px;
+  }
+}

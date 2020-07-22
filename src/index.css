@@ -1,13 +1,171 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Spectral", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "iCielLOUSIANE";
+  src: url("./assets/fonts/iCielLOUSIANE.eot");
+  src: url("./assets/fonts/iCielLOUSIANE.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/iCielLOUSIANE.svg#iCielLOUSIANE") format("svg"),
+    url("./assets/fonts/iCielLOUSIANE.ttf") format("truetype"),
+    url("./assets/fonts/iCielLOUSIANE.woff") format("woff"),
+    url("./assets/fonts/iCielLOUSIANE.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a:hover {
+  color: #fccc84 !important;
+  text-decoration: none;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.ici {
+  font-family: "iCielLOUSIANE";
+}
+
+.col-yell {
+  color: #fccc84;
+}
+
+.btn:hover {
+  border: 1px solid #fccc84 !important;
+}
+
+.btn {
+  background-color: #000 !important;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }

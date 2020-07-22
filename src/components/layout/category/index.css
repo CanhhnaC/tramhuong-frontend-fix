@@ -1,0 +1,23 @@
+.nav-category {
+  padding: 60px 0;
+  font-size: 60px;
+  background-image: url("../img/nav1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.categoryBar {
+  background-image: url("../img/navbar.png");
+  background-position: center;
+  background-size: cover;
+
+  z-index: 10;
+  margin: 0;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.categoryBar a {
+  padding: 0 20px;
+  font-size: 0.9em;
+}
