@@ -1,12 +1,13 @@
 import React from "react";
-
-import imgSlide from "../img/ludottram.jpg";
+import { useRouteMatch } from "react-router";
 
 import {
   CategoryMain,
   CategorySlide,
   CategoryBar,
 } from "../../layout/category";
+
+import imgSlide from "../img/ludottram.jpg";
 
 const dataSlide = {
   name: "Lư đốt trầm",
@@ -40,26 +41,27 @@ const dataMain = [
   },
 ];
 
-const dataBar = [
-  {
-    name: "Lư đốt trầm",
-    link: "lu-dot-tram",
-  },
-  {
-    name: "Lư xông điện",
-    link: "lu-xong-dien",
-  },
-  {
-    name: "Bộ thưởng trầm",
-    link: "bo-thuong-tram",
-  },
-  {
-    name: "Lư Bình Dân",
-    link: "lu-binh-dan",
-  },
-];
-
 export default function DungCu() {
+  var link = useRouteMatch().url;
+  const dataBar = [
+    {
+      name: "Lư đốt trầm",
+      link: link + "/lu-dot-tram",
+    },
+    {
+      name: "Lư xông điện",
+      link: link + "/lu-xong-dien",
+    },
+    {
+      name: "Bộ thưởng trầm",
+      link: link + "/bo-thuong-tram",
+    },
+    {
+      name: "Lư Bình Dân",
+      link: link + "/lu-binh-dan",
+    },
+  ];
+
   return (
     <div>
       <CategoryBar data={dataBar} name="Dụng cụ thưởng trầm" />

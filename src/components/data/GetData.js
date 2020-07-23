@@ -44,10 +44,10 @@ const GetProductList = async ({ typesId, limit }) => {
     .get()
     .then((doc) => {
       item = doc.docs.map(collectIdsAndData);
-      console.log(item);
       return item;
     })
     .catch((err) => console.log(err));
+  return item;
 };
 
 function timeConverter(UNIX_timestamp) {
@@ -67,4 +67,8 @@ function timeConverter(UNIX_timestamp) {
   return time;
 }
 
-export { GetList, GetOne, GetProductList, timeConverter };
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+export { GetList, GetOne, GetProductList, timeConverter, numberWithCommas };

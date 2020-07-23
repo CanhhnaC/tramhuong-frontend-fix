@@ -13,3 +13,32 @@
     margin: 10px 0;
   }
 }
+
+.productBST-item {
+  padding: 60px 10%;
+  margin: 10px 0;
+  background-color: #1a1a1a;
+  align-items: center;
+
+  .productBST-item__col1 {
+    text-align: center;
+    img {
+      max-height: 300px;
+    }
+  }
+
+  .productBST-item__col2 {
+    h1 {
+      text-transform: uppercase;
+    }
+    h4 {
+      font-weight: lighter;
+    }
+    p {
+      color: #bfbfbf;
+      padding: 30px 0 15px;
+      max-height: 143px;
+      overflow: hidden;
+    }
+  }
+}

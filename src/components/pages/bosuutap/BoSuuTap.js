@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouteMatch } from "react-router";
 
 import imgVong from "../img/vong.jpg";
 import imgTramCanh from "../img/tramcanh.jpg";
@@ -10,7 +11,6 @@ import {
   CategorySlide,
   CategoryBar,
 } from "../../layout/category";
-import { useRouteMatch } from "react-router";
 
 const dataSlide = {
   name: "Tác phẩm",

@@ -1,56 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useRouteMatch, Link } from "react-router-dom";
-import { Image, Button } from "react-bootstrap";
+import { Image, Button, Row, Col } from "react-bootstrap";
 
-import {
-  CategoryMain,
-  CategorySlide,
-  CategoryBar,
-  NavCategory,
-} from "../../layout/category";
-import { GetProductList } from "../../data/GetData";
+import { CategoryBar, NavCategory } from "../../layout/category";
+import { GetProductList, numberWithCommas } from "../../data/GetData";
 import { typeCategory, nameCategory, dataCategory } from "../../data/config";
+import FadeInSection from "../../layout/effect/FadeInSection";
 
-import imgVong from "../img/vong.jpg";
-import imgTramCanh from "../img/tramcanh.jpg";
-import imgNhangTram from "../img/nhangtram.jpg";
-import imgSlide from "../img/ludottram.jpg";
 import imgVongCo from "../img/vongco.jpg";
 import imgVongTay from "../img/vongtay.jpg";
 
 import "./CategoryBTS.scss";
-
-const dataSlide = {
-  name: "Tác phẩm",
-  des: "lorem islum dolor lorem islum dolorlorem islum dolorlorem islum dolor",
-  link: "/tac-pham",
-  img: imgSlide,
-};
-
-const dataMain = [
-  {
-    name: "Vòng",
-    des: "lorem islum dolor",
-    link: `/vong`,
-    orderTxt: "first",
-    img: imgVong,
-  },
-  {
-    name: "Trầm Cảnh",
-    des:
-      "lorem islum dolor lorem islum dolor lorem islum dolor lorem islum dolor lorem islum dolor lorem islum dolor",
-    link: `/vong`,
-    orderTxt: "last",
-    img: imgTramCanh,
-  },
-  {
-    name: "Nhang Trầm",
-    des: "lorem islum dolor lorem islum dolor lorem islum dolor",
-    link: `/vong`,
-    orderTxt: "first",
-    img: imgNhangTram,
-  },
-];
 
 function Navbar() {
   var links = useRouteMatch();
@@ -105,9 +65,37 @@ function MainBTS({ data }) {
 function ShowProduct({ product }) {
   let match = useRouteMatch();
   return (
-    <div className="productBST-item">
-      <h1>{product.name}</h1>
-    </div>
+    <FadeInSection>
+      <Row className="productBST-item">
+        <Col lg={6} className="productBST-item__col1">
+          {typeof product.pictures != "undefined" && (
+            <Image
+              fluid
+              src={product.pictures[0].src}
+              alt={product.pictures[0].title}
+            />
+          )}
+        </Col>
+        <Col lg={6} className="productBST-item__col2">
+          <h1 className="ici upper">{product.name}</h1>
+          <h4 className="col-yell fntw">{numberWithCommas(product.price)}</h4>
+          <p
+            style={{
+              color: "#bfbfbf",
+              maxHeight: "143px",
+              overflow: "hidden",
+            }}
+          >
+            {product.description[0].content}
+          </p>
+          <Link to={`${match.url}/${product.id}`}>
+            <Button variant="dark" className="upper">
+              Tìm hiểu
+            </Button>
+          </Link>
+        </Col>
+      </Row>
+    </FadeInSection>
   );
 }
 
