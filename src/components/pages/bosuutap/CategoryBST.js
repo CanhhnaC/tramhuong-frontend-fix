@@ -77,17 +77,9 @@ function ShowProduct({ product }) {
           )}
         </Col>
         <Col lg={6} className="productBST-item__col2">
-          <h1 className="ici upper">{product.name}</h1>
-          <h4 className="col-yell fntw">{numberWithCommas(product.price)}</h4>
-          <p
-            style={{
-              color: "#bfbfbf",
-              maxHeight: "143px",
-              overflow: "hidden",
-            }}
-          >
-            {product.description[0].content}
-          </p>
+          <h1 className="ici">{product.name}</h1>
+          <h4 className="col-yell">{numberWithCommas(product.price)}</h4>
+          <p>{product.description[0].content}</p>
           <Link to={`${match.url}/${product.id}`}>
             <Button variant="dark" className="upper">
               Tìm hiểu

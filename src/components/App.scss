@@ -8,6 +8,7 @@ a {
 }
 
 .btn {
+  padding-top: 9px;
   border: 1px solid #fccc84;
   border-radius: 0;
   display: inline-block;
@@ -17,6 +18,7 @@ a {
   position: relative;
   transition-property: color;
   transition-duration: 0.5s;
+
   &:before {
     content: "";
     position: absolute;

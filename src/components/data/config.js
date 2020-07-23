@@ -16,19 +16,19 @@ const dataCategory = {
 };
 
 const nameCategory = {
-  "tram-mieng": "Trầm miếng",
-  "nhang-khong-tam": "Nhang không tăm",
-  "tram-canh": "trầm cảnh",
-  "lu-dot-tram": "lư đốt trầm",
-  "lu-binh-dan": "lư bình dân",
-  "nhang-cay": "nhang cây",
-  "nhang-nu": "nhanh nụ",
-  "mat-day-chuyen": "mặt dây chuyền",
+  "tac-pham": "tác phẩm",
   "vong-co": "vòng cổ",
   "vong-tay": "vòng tay",
+  "mat-day-chuyen": "mặt dây chuyền",
+  "tram-canh": "trầm cảnh",
+  "tram-mieng": "Trầm miếng",
+  "nhang-khong-tam": "Nhang không tăm",
+  "nhang-cay": "nhang cây",
+  "nhang-nu": "nhanh nụ",
   "bot-tram": "Bột trầm",
-  "lu-xong-dien": "trầm miếng",
-  "tac-pham": "tác phẩm",
+  "lu-xong-dien": "lư xông điện",
+  "lu-dot-tram": "lư đốt trầm",
+  "lu-binh-dan": "lư bình dân",
   "bo-thuong-tram": "bộ thưởng trầm",
 };
 

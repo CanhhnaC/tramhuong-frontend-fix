@@ -18,7 +18,7 @@ import ThongTin from "./pages/thongtin";
 
 // // List component
 import CategoryBST from "./pages/bosuutap/CategoryBST";
-// import CategoryDCTT from "./pages/dungcu/CategoryDCTT";
+import CategoryDCTT from "./pages/dungcu/CategoryDCTT";
 
 import ScrollToTop from "./layout/effect/ScrollToTop";
 // Css
@@ -42,7 +42,7 @@ function App() {
             <Route exact path="/thong-tin" component={ThongTin} />
 
             <Route exact path="/bo-suu-tap/:category" component={CategoryBST} />
-            {/* <Route exact path="/dung-cu/:category" component={CategoryDCTT} /> */}
+            <Route exact path="/dung-cu/:category" component={CategoryDCTT} />
             {/* <Route exact path="/bo-suu-tap/:category/:productID" component={ProductBST} /> */}
             {/* <Route exact path="/dung-cu/:category/:productID" component={ProductDCTT} /> */}
           </Main>

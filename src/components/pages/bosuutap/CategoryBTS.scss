@@ -36,9 +36,12 @@
     }
     p {
       color: #bfbfbf;
-      padding: 30px 0 15px;
-      max-height: 143px;
+      margin: 30px 0 15px;
       overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 5; /* number of lines to show */
+      -webkit-box-orient: vertical;
     }
   }
 }

@@ -1,0 +1,22 @@
+.productDCTT-item {
+  padding: 60px 10%;
+  align-items: center;
+  text-align: center;
+  & > div {
+    padding: 20px 0;
+
+    img {
+      object-fit: cover;
+      width: 250px;
+      height: 250px;
+    }
+    h5 {
+      padding-bottom: 15px;
+      font-weight: lighter;
+    }
+    h2 {
+      padding-top: 20px;
+      text-transform: uppercase;
+    }
+  }
+}

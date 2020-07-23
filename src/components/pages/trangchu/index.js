@@ -23,6 +23,7 @@ function HomePage() {
     backgroundColor: "#161616",
     padding: "30px",
     margin: "15px 1px",
+    fontSize: "1.1rem",
   };
   const veChungToiStyle = {
     margin: "15px 1px",
