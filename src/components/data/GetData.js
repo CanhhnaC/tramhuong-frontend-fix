@@ -3,11 +3,16 @@ import { collectIdsAndData } from "./utilities";
 
 const GetOne = async ({ collection, uid }) => {
   let item = null;
-  const snapshot = await firestore.collection(collection).doc(uid).get().then((doc) => {
-    item = doc.data()
-    return item;
-  }).catch((err) => console.log(err));
-  return item
+  const snapshot = await firestore
+    .collection(collection)
+    .doc(uid)
+    .get()
+    .then((doc) => {
+      item = doc.data();
+      return item;
+    })
+    .catch((err) => console.log(err));
+  return item;
 };
 
 const GetList = async ({ collection, limit }) => {
@@ -43,7 +48,7 @@ const GetProductList = async ({ typesId, limit }) => {
 
 function timeConverter(UNIX_timestamp) {
   var a = new Date(UNIX_timestamp * 1000);
-  var year = a.getFullYear();
+  var year = a.getFullYear() - 1969;
   var month = a.getMonth();
   var date = a.getDate();
   var hour = a.getHours();
@@ -59,7 +64,7 @@ function timeConverter(UNIX_timestamp) {
 }
 
 function numberWithCommas(x) {
-  x = x + ""
+  x = x + "";
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 

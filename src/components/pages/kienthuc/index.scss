@@ -8,6 +8,12 @@
     p {
       color: #c0c0c0;
       padding: 40px 0 20px;
+      font-size: 14pt;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 15; /* number of lines to show */
+      -webkit-box-orient: vertical;
     }
     button {
       text-transform: uppercase;
@@ -17,6 +23,43 @@
     button {
       text-transform: uppercase;
       padding: 10px 20%;
+    }
+  }
+}
+
+.postKienThuc {
+  padding: 60px 50px;
+
+  .postKienThuc-content {
+    padding: 60px 20%;
+    p {
+      padding: 20px 0;
+      color: #bebebe;
+      font-size: 14pt;
+    }
+  }
+}
+
+.relateKienThuc {
+  margin-top: 50px;
+  .kienthuc-item {
+    padding: 20px 40px;
+
+    h5 {
+      color: #5c5c5c;
+    }
+    p {
+      color: #c0c0c0;
+      padding: 40px 0 20px;
+      font-size: 14pt;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 15; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+    button {
+      text-transform: uppercase;
     }
   }
 }

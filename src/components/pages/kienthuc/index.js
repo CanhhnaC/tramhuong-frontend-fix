@@ -7,8 +7,7 @@ import { GetList, timeConverter } from "../../data/GetData";
 
 import "./index.scss";
 
-function Show({ post }) {
-  let match = useRouteMatch();
+export function Show({ post, children }) {
   return (
     <div className="kienthuc-item">
       <Row key={post.createdate}>
@@ -22,11 +21,9 @@ function Show({ post }) {
         </Col>
         <Col>
           <h1 className="ici upper">{post.name}</h1>
-          <h5>{timeConverter(post.date.seconds)}</h5>
+          <h5>{timeConverter(post.date)}</h5>
           <p>{post.description[0].content}</p>
-          <Link to={`${match.url}/${post.id}`}>
-            <Button variant="dark">Đọc thêm</Button>
-          </Link>
+          {children}
         </Col>
       </Row>
     </div>
@@ -34,6 +31,7 @@ function Show({ post }) {
 }
 
 export default function KienThuc() {
+  let match = useRouteMatch();
   const [limit, setLimit] = useState(5);
   const [postList, setPostList] = useState([]);
 
@@ -52,7 +50,13 @@ export default function KienThuc() {
       <NavCategory titleNav={"Kiến thức"} />
       <div>
         {postList.map((u) => {
-          return <Show key={u.id} post={u} />;
+          return (
+            <Show key={u.id} post={u}>
+              <Link to={`${match.url}/${u.id}`}>
+                <Button variant="dark">Đọc thêm</Button>
+              </Link>
+            </Show>
+          );
         })}
       </div>
       <div className="kienthuc-seemore">

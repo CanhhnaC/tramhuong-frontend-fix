@@ -58,6 +58,9 @@ function App() {
               component={ProductDCTT}
             />
             {/* <Route exact path="/bo-suu-tap/:category/:productID" component={ProductBST} /> */}
+            <Route>
+              <h1>Không tìm thấy trang bạn yêu cầu</h1>
+            </Route>
           </Main>
         </Switch>
         <ScrollTopArrow />
