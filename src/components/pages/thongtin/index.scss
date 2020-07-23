@@ -86,3 +86,54 @@
     }
   }
 }
+
+.postThongTin {
+  padding: 70px;
+  .postThongTin-col1 {
+    & > div {
+      margin: 20px 0;
+      align-items: center;
+      & > div {
+        button {
+          cursor: context-menu !important;
+          background-color: white !important;
+          color: black;
+          border: 1px solid white;
+          width: 100%;
+
+          &:hover,
+          &:focus,
+          &:active {
+            border: 1px solid #fff;
+          }
+          &:before {
+            background: #fff;
+          }
+        }
+      }
+    }
+
+    h1 {
+      padding-bottom: 30px;
+    }
+    p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+  }
+  .postThongTin-col1__des {
+    color: #c0c0be;
+    padding-top: 30px;
+  }
+}
+
+.RelatedEvent {
+  padding: 70px;
+  align-items: center;
+  .RelatedEvent-link {
+    p {
+      margin-bottom: 5px;
+    }
+    text-align: right;
+  }
+}
