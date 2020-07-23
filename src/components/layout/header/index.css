@@ -1,5 +1,7 @@
 header {
-  background-color: #1a1a1a;
+  background-image: url(../img/header.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 header img {

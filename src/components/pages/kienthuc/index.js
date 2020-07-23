@@ -7,7 +7,7 @@ import { GetList, timeConverter } from "../../data/GetData";
 
 import "./index.scss";
 
-function Show({ post, check }) {
+function Show({ post }) {
   let match = useRouteMatch();
   return (
     <div className="kienthuc-item">

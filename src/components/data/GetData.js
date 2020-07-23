@@ -1,21 +1,6 @@
 import { firestore } from "./firebase";
 import { collectIdsAndData } from "./utilities";
 
-const GetList = async ({ collection, limit }) => {
-  let item = null;
-  const snapshot = await firestore
-    .collection(collection)
-    .orderBy("createdate")
-    .limit(limit)
-    .get()
-    .then((doc) => {
-      item = doc.docs.map(collectIdsAndData);
-      return item;
-    })
-    .catch((err) => console.log(err));
-  return item;
-};
-
 const GetOne = async ({ collection, uid }) => {
   const snapshot = await firestore.collection(collection).doc(uid);
   snapshot
@@ -32,6 +17,37 @@ const GetOne = async ({ collection, uid }) => {
       console.log(err);
       return null;
     });
+};
+
+const GetList = async ({ collection, limit }) => {
+  let item = null;
+  const snapshot = await firestore
+    .collection(collection)
+    .orderBy("createdate")
+    .limit(limit)
+    .get()
+    .then((doc) => {
+      item = doc.docs.map(collectIdsAndData);
+      return item;
+    })
+    .catch((err) => console.log(err));
+  return item;
+};
+
+const GetProductList = async ({ typesId, limit }) => {
+  let item = null;
+  const snapshot = await firestore
+    .collection("products")
+    .orderBy("createdate")
+    .where("typesId", "==", typesId)
+    .limit(limit)
+    .get()
+    .then((doc) => {
+      item = doc.docs.map(collectIdsAndData);
+      console.log(item);
+      return item;
+    })
+    .catch((err) => console.log(err));
 };
 
 function timeConverter(UNIX_timestamp) {
@@ -51,4 +67,4 @@ function timeConverter(UNIX_timestamp) {
   return time;
 }
 
-export { GetList, GetOne, timeConverter };
+export { GetList, GetOne, GetProductList, timeConverter };

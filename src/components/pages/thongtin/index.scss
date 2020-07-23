@@ -43,12 +43,17 @@
       position: relative;
 
       button {
+        display: none;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 10;
         text-transform: uppercase;
+      }
+      &:hover button {
+        transition: all 1s;
+        display: block;
       }
 
       a > div {

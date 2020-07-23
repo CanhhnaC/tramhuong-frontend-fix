@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Image, Button } from "react-bootstrap";
-import NavCategory from "../../layout/NavCategory/NavCategory";
+import { NavCategory } from "../../layout/category";
 
 export default function CategoryBST(props) {
   return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useRouteMatch, Link } from "react-router-dom";
 import { Image, Button } from "react-bootstrap";
 
@@ -8,6 +8,7 @@ import {
   CategoryBar,
   NavCategory,
 } from "../../layout/category";
+import { GetProductList } from "../../data/GetData";
 import { typeCategory, nameCategory, dataCategory } from "../../data/config";
 
 import imgVong from "../img/vong.jpg";
@@ -81,6 +82,57 @@ function Navbar() {
   )
     navbar = <CategoryBar data={dataBar} name="Bộ sưu tập" />;
   return navbar;
+}
+
+function MainBTS({ data }) {
+  return (
+    <div>
+      {data.map((item) => (
+        <div className="main-bst" key={item.name}>
+          <NavCategory titleNav={item.name} />
+          <p>{item.des}</p>
+          <Image src={item.img} title={item.name} fluid />
+          <br />
+          <Link to={item.link}>
+            <Button>Tìm hiểu</Button>
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ShowProduct({ product }) {
+  let match = useRouteMatch();
+  return (
+    <div className="productBST-item">
+      <h1>{product.name}</h1>
+    </div>
+  );
+}
+
+function ProductList({ typeId }) {
+  const [limit, setLimit] = useState(4);
+  const [productList, setProductList] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const item = await GetProductList({ typesId: typeId, limit: limit });
+      if (item) {
+        setProductList(item);
+      }
+    }
+    fetchData();
+  }, [limit]);
+  return (
+    <div>
+      {productList.map((item) => {
+        return <ShowProduct key={item.id} product={item} />;
+      })}
+      <NavCategory>
+        <Button onClick={() => setLimit(limit + 5)}>Xem Thêm</Button>
+      </NavCategory>
+    </div>
+  );
 }
 
 function Main() {
@@ -172,27 +224,6 @@ function Main() {
   }
 
   return main;
-}
-
-function MainBTS({ data }) {
-  return (
-    <div>
-      {data.map((item) => (
-        <div className="main-bst" key={item.name}>
-          <NavCategory titleNav={item.name} />
-          <p>{item.des}</p>
-          <Image src={item.img} title={item.name} fluid />
-          <br />
-          <Link to={item.link}>
-            <Button>Tìm hiểu</Button>
-          </Link>
-        </div>
-      ))}
-    </div>
-  );
-}
-function ProductList() {
-  return <h1>ProductList</h1>;
 }
 
 export default function CategoryBST() {
