@@ -3,7 +3,6 @@ import { collectIdsAndData } from "./utilities";
 
 const GetOne = async ({ collection, uid }) => {
   let item = null;
-
   const snapshot = await firestore.collection(collection).doc(uid).get().then((doc) => {
     item = doc.data()
     return item;
