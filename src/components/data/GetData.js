@@ -2,21 +2,13 @@ import { firestore } from "./firebase";
 import { collectIdsAndData } from "./utilities";
 
 const GetOne = async ({ collection, uid }) => {
-  const snapshot = await firestore.collection(collection).doc(uid);
-  snapshot
-    .get()
-    .then((doc) => {
-      if (doc.exists) {
-        const item = doc.data();
-        return item;
-      } else {
-        return null;
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-      return null;
-    });
+  let item = null;
+
+  const snapshot = await firestore.collection(collection).doc(uid).get().then((doc) => {
+    item = doc.data()
+    return item;
+  }).catch((err) => console.log(err));
+  return item
 };
 
 const GetList = async ({ collection, limit }) => {
@@ -68,6 +60,7 @@ function timeConverter(UNIX_timestamp) {
 }
 
 function numberWithCommas(x) {
+  x = x + ""
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 

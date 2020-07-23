@@ -5,17 +5,12 @@ import { Image, Button, Row, Col } from "react-bootstrap";
 import { CategoryBar, NavCategory } from "../../layout/category";
 import { GetProductList, numberWithCommas } from "../../data/GetData";
 import { typeCategory, nameCategory, dataCategory } from "../../data/config";
-import FadeInSection from "../../layout/effect/FadeInSection";
-
-import imgVongCo from "../img/vongco.jpg";
-import imgVongTay from "../img/vongtay.jpg";
 
 import "./CategoryDCTT.scss";
 
 function Navbar() {
   var links = useRouteMatch();
   var parentPath = links.url.substring(0, links.url.lastIndexOf("/"));
-  var navbar = null;
 
   const dataBar = [
     {
@@ -66,9 +61,7 @@ function ProductList({ typeId }) {
   useEffect(() => {
     async function fetchData() {
       const item = await GetProductList({ typesId: typeId, limit: limit });
-      if (item) {
-        setProductList(item);
-      }
+      if (item) setProductList(item);
     }
     fetchData();
   }, [limit, typeId]);

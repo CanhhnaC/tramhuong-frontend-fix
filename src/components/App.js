@@ -16,9 +16,15 @@ import ChinhSach from "./pages/ChinhSach";
 import KienThuc from "./pages/kienthuc";
 import ThongTin from "./pages/thongtin";
 
+import Event from "./pages/thongtin/Event";
+import Post from "./pages/kienthuc/Post";
+
 // // List component
 import CategoryBST from "./pages/bosuutap/CategoryBST";
 import CategoryDCTT from "./pages/dungcu/CategoryDCTT";
+
+import ProductDCTT from './pages/dungcu/ProductDCTT'
+// Product 
 
 import ScrollToTop from "./layout/effect/ScrollToTop";
 // Css
@@ -41,10 +47,14 @@ function App() {
             <Route exact path="/kien-thuc" component={KienThuc} />
             <Route exact path="/thong-tin" component={ThongTin} />
 
+            <Route exact path="/thong-tin/:eventID" component={Event} />
+            <Route exact path="/kien-thuc/:postID" component={Post} />
+
+
             <Route exact path="/bo-suu-tap/:category" component={CategoryBST} />
             <Route exact path="/dung-cu/:category" component={CategoryDCTT} />
+            <Route exact path="/dung-cu/:category/:productID" component={ProductDCTT} />
             {/* <Route exact path="/bo-suu-tap/:category/:productID" component={ProductBST} /> */}
-            {/* <Route exact path="/dung-cu/:category/:productID" component={ProductDCTT} /> */}
           </Main>
         </Switch>
       </ScrollToTop>

@@ -20,3 +20,66 @@
     }
   }
 }
+
+.oneProduct-dctt {
+  padding: 90px 60px;
+
+  .oneProduct-dctt-col1 {
+    padding: 0 80px;
+
+    .dctt-col1_container {
+      padding-bottom: 10px;
+      display: block;
+      margin: auto;
+      img {border: 1px solid white}
+    }
+    .dctt-col1_list {
+      img:hover {
+        border: 1px solid #fccc84 ;
+      }
+    }
+  }
+  .oneProduct-dctt-col2 {
+    h5 {
+      color: #fccc84 ;
+      padding-bottom: 10px;
+    }
+  
+    h6 {
+      padding: 20px 0;
+    }
+    .oneProduct-dctt_text {
+      max-height: 441px;
+      overflow-y: auto;
+      padding-right: 20px;
+      margin-bottom: 30px;
+      position: relative;
+      
+      &::after {
+        content: "";
+        position: absolute; 
+        bottom: 0; 
+        left: 0;
+        width: 100%; 
+        text-align: center; 
+        margin: 0; padding: 30px 0; 
+        background-image: linear-gradient(to bottom, transparent, black);
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+  
+      &::-webkit-scrollbar-track {
+        background: #0f0f0f;
+        border: 1px solid #fccc84 ;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: white;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgb(170, 170, 170);
+      }
+    }
+  }
+}
