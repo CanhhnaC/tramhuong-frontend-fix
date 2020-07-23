@@ -31,6 +31,10 @@ import ScrollToTop from "./layout/effect/ScrollToTop";
 import "./App.scss";
 import ScrollTopArrow from "./layout/effect/ScrollTopArrow";
 
+function NotFound() {
+  return <h1>Không tìm thấy trang bạn yêu cầu</h1>;
+}
+
 function App() {
   return (
     <Router>
@@ -62,10 +66,8 @@ function App() {
               path="/bo-suu-tap/:category/:productID"
               component={ProductDCTT}
             />
-            <Route>
-              <h1>Không tìm thấy trang bạn yêu cầu</h1>
-            </Route>
           </Main>
+          <Route component={NotFound} />
         </Switch>
         <ScrollTopArrow />
       </ScrollToTop>

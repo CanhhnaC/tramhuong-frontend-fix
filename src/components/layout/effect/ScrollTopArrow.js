@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ArrowUpward } from "@material-ui/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
 import "./ScrollTopArrow.css";
 
 const ScrollTopArrow = () => {
@@ -24,7 +25,7 @@ const ScrollTopArrow = () => {
       onClick={scrollTop}
       style={{ height: 40, display: showScroll ? "flex" : "none" }}
     >
-      <ArrowUpward style={{ fontSize: 60 }} />
+      <FontAwesomeIcon icon={faArrowAltCircleUp} size="4x" />
     </div>
   );
 };
