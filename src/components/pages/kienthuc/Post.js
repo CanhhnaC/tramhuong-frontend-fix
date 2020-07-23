@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
-import { Row, Col, Image, Button } from "react-bootstrap";
-import { NavCategory } from "../../layout/category";
+import { Image, Button } from "react-bootstrap";
 
 import { timeConverter, GetOne, GetList } from "../../data/GetData";
 import { Show } from "./index";

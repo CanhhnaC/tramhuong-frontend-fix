@@ -57,7 +57,11 @@ function App() {
               path="/dung-cu/:category/:productID"
               component={ProductDCTT}
             />
-            {/* <Route exact path="/bo-suu-tap/:category/:productID" component={ProductBST} /> */}
+            <Route
+              exact
+              path="/bo-suu-tap/:category/:productID"
+              component={ProductDCTT}
+            />
             <Route>
               <h1>Không tìm thấy trang bạn yêu cầu</h1>
             </Route>

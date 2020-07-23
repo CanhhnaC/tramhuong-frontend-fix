@@ -102,7 +102,7 @@ function ProductList({ typeId }) {
       }
     }
     fetchData();
-  }, [limit]);
+  }, [limit, typeId]);
   return (
     <div>
       {productList.map((item) => {
