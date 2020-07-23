@@ -23,12 +23,13 @@ import Post from "./pages/kienthuc/Post";
 import CategoryBST from "./pages/bosuutap/CategoryBST";
 import CategoryDCTT from "./pages/dungcu/CategoryDCTT";
 
-import ProductDCTT from './pages/dungcu/ProductDCTT'
-// Product 
+import ProductDCTT from "./pages/dungcu/ProductDCTT";
+// Product
 
 import ScrollToTop from "./layout/effect/ScrollToTop";
 // Css
 import "./App.scss";
+import ScrollTopArrow from "./layout/effect/ScrollTopArrow";
 
 function App() {
   return (
@@ -37,7 +38,6 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={TrangChu} />
-
           <Main styles={{ padding: "0" }}>
             <Route exact path="/bo-suu-tap" component={BoSuuTap} />
             <Route exact path="/dung-cu" component={DungCu} />
@@ -50,13 +50,17 @@ function App() {
             <Route exact path="/thong-tin/:eventID" component={Event} />
             <Route exact path="/kien-thuc/:postID" component={Post} />
 
-
             <Route exact path="/bo-suu-tap/:category" component={CategoryBST} />
             <Route exact path="/dung-cu/:category" component={CategoryDCTT} />
-            <Route exact path="/dung-cu/:category/:productID" component={ProductDCTT} />
+            <Route
+              exact
+              path="/dung-cu/:category/:productID"
+              component={ProductDCTT}
+            />
             {/* <Route exact path="/bo-suu-tap/:category/:productID" component={ProductBST} /> */}
           </Main>
         </Switch>
+        <ScrollTopArrow />
       </ScrollToTop>
     </Router>
   );
