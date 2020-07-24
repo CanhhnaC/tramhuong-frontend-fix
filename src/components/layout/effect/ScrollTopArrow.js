@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
 import "./ScrollTopArrow.css";
+import ArrowTop from "./arrow.svg";
 
 const ScrollTopArrow = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -25,7 +24,7 @@ const ScrollTopArrow = () => {
       onClick={scrollTop}
       style={{ height: 40, display: showScroll ? "flex" : "none" }}
     >
-      <FontAwesomeIcon icon={faArrowAltCircleUp} size="4x" />
+      <img src={ArrowTop} alt="Scroll Top" />
     </div>
   );
 };

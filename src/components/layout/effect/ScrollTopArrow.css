@@ -1,8 +1,8 @@
 .scrollTop {
   color: white;
   position: fixed;
-  bottom: 20px;
-  right: 50px;
+  bottom: 30px;
+  right: 0;
   align-items: center;
   height: 20px;
   justify-content: center;
@@ -15,6 +15,10 @@
 
 .scrollTop:hover {
   opacity: 1;
+}
+
+.scrollTop img {
+  width: 40%;
 }
 
 @keyframes fadeIn {

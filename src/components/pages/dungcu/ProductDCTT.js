@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useRouteMatch } from "react-router-dom";
 import { CategoryBar } from "../../layout/category";
-import { GetOne, numberWithCommas } from "../../data/GetData";
+import { GetOne, numberWithCommas, GetProductList } from "../../data/GetData";
 import { Row, Col, Button, Image } from "react-bootstrap";
+import { CarouselSlides } from "../../layout/effect/CarouselSlides";
+import { dataCategory } from "../../data/config";
 
 function Product({ id }) {
   const [product, setProduct] = useState({});
@@ -61,8 +63,23 @@ function Product({ id }) {
   );
 }
 
-function RelatedProduct({ id }) {
-  return <div></div>;
+function RelatedProduct({ category }) {
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const item = await GetProductList({ typesId: category, limit: 5 });
+      if (item) setProduct(item);
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <div className="carousel-slides">
+      <CarouselSlides slides={product} />
+    </div>
+  );
+  // return <div>{console.log(category)}</div>;
 }
 
 export default function ProductDCTT() {
@@ -70,6 +87,7 @@ export default function ProductDCTT() {
   var path = link.url.substring(0, link.url.lastIndexOf("/"));
   var parentPath = path.substring(0, path.lastIndexOf("/"));
   var id = link.params.productID;
+  var category = dataCategory[link.params.category];
 
   const dataBar = [
     {
@@ -94,7 +112,7 @@ export default function ProductDCTT() {
     <div>
       <CategoryBar data={dataBar} name="Dụng cụ thưởng trầm" />
       <Product id={id} />
-      <RelatedProduct id={id} />
+      <RelatedProduct category={category} />
     </div>
   );
 }
