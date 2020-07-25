@@ -85,10 +85,20 @@ function HomePage() {
         <Col lg={6}>
           <Row>
             <Col>
-              <Image fluid src={imgDungCu1} alt="Dụng cụ thưởng trầm" />
+              <Image
+                fluid
+                style={{ height: "480px" }}
+                src={imgDungCu1}
+                alt="Dụng cụ thưởng trầm"
+              />
             </Col>
             <Col>
-              <Image fluid src={imgDungCu2} alt="Dụng cụ thưởng trầm" />
+              <Image
+                style={{ height: "480px" }}
+                fluid
+                src={imgDungCu2}
+                alt="Dụng cụ thưởng trầm"
+              />
             </Col>
           </Row>
         </Col>
