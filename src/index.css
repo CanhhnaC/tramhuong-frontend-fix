@@ -12,12 +12,7 @@ code {
 
 @font-face {
   font-family: "iCielLOUSIANE";
-  src: url("./assets/fonts/iCielLOUSIANE.eot");
-  src: url("./assets/fonts/iCielLOUSIANE.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/iCielLOUSIANE.svg#iCielLOUSIANE") format("svg"),
-    url("./assets/fonts/iCielLOUSIANE.ttf") format("truetype"),
-    url("./assets/fonts/iCielLOUSIANE.woff") format("woff"),
+  src: url("./assets/fonts/iCielLOUSIANE.woff") format("woff"),
     url("./assets/fonts/iCielLOUSIANE.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
