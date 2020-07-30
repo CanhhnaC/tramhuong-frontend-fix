@@ -2,9 +2,18 @@ header {
   background-image: url(../img/header.jpg);
   background-size: cover;
   background-position: center;
+  
+  font-size: 15px;
 }
 
 header img {
   height: 100px;
   margin: 20px 0;
+}
+
+.header-logo {
+  margin: 0 150px;
+}
+header div div a{
+  padding-top: 20px !important;
 }

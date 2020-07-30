@@ -35,7 +35,7 @@ export default function Header() {
         </Nav.Item>
         <Nav.Item>
           <NavLink activeStyle={activeStyle} className="nav-link" to="/">
-            <img className="" src={logo} alt={"logo"} />
+            <img className="header-logo"  src={logo} alt={"logo"} />
           </NavLink>
         </Nav.Item>
         <Nav.Item>
