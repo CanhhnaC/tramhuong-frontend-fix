@@ -4,15 +4,9 @@ import { useRouteMatch, Link } from "react-router-dom";
 import "./CarouselSlides.scss";
 
 const CarouselSlides = ({ slides }) => {
-  const [selectedIdx, setSelectedIdx] = React.useState(0);
-  const [slideOrder, setSlideOrder] = React.useState([
-    "s4",
-    "s5",
-    "s1",
-    "s2",
-    "s3",
-  ]);
-  const [slideStyles, setSlideStyles] = React.useState({});
+  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [slideOrder, setSlideOrder] = useState(["s4", "s5", "s1", "s2", "s3"]);
+  const [slideStyles, setSlideStyles] = useState({});
 
   const rotate = (slides) => {
     const [s1, s2, s3, s4, s5] = slides;

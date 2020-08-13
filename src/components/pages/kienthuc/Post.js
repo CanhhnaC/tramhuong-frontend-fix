@@ -85,9 +85,10 @@ export default function Post() {
       <ShowPost post={post} content={content} />
       <div className="relateKienThuc">
         {relate.map((u) => {
+          console.log(parentPath);
           return (
             <Show key={u.id} post={u}>
-              <Link to={`${parentPath.url}/${post.id}`}>
+              <Link to={`${parentPath}/${u.id}`}>
                 <Button variant="dark">Đọc thêm</Button>
               </Link>
             </Show>
